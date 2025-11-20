@@ -1,0 +1,29 @@
+For .py files 1 to 5
+
+• The purchases table contains actual purchase data, including the date of purchase, products (brands) purchased by vendors, the amount paid (in dollars), and the quantity purchased.
+• The purchase price column is derived from the purchase_prices table, which provides product-wise actual and purchase prices. The combination of vendor and brand is unique in this table.
+• The vendor_invoice table aggregates data from the purchases table, summarizing quantity and dollar amounts, along with an additional column for freight. This table maintains uniqueness based on vendor and PO number.
+• The sales table captures actual sales transactions, detailing the brands purchased by vendors, the quantity sold, the selling price, and the revenue earned.
+
+As the data that we need for analysis is distributed in different tables, we need to create a summary table containing:
+• purchase transactions made by vendors
+• sales transaction data
+• freight costs for each vendor
+• actual product prices from vendors
+
+The query generates a vendor-wise sales and purchase summary, which is valuable for:
+Performance Optimization:
+- The query involves heavy joins and aggregations on large datasets like sales and purchases.
+- Storing the pre-aggregated results avoids repeated expensive computations.
+- Helps in analyzing sales, purchases, and pricing for different vendors and brands.
+- Future Benefits of Storing this data for faster Dashboarding & Reporting.
+- Instead of running expensive queries each time, dashboards can fetch data quickly from vendor_sales_summary.
+
+• Vendors buying in bulk (Large Order Size) get the lowest unit price ($10.78 per unit), meaning higher margins if they can manage inventory efficiently.
+• The price difference between Small and Large orders is substantial (~72% reduction in unit cost).
+• This suggests that bulk pricing strategies successfully encourage vendors to purchase in larger volumes, leading to higher overall sales despite lower per-unit revenue.
+
+• The confidence interval for low-performing vendors (40.48% to 42.62%) is significantly higher than that of top-performing vendors (30.74% to 31.61%).
+• This suggests that vendors with lower sales tend to maintain higher profit margins, potentially due to premium pricing or lower operational costs.
+• For High-Performing Vendors: If they aim to improve profitability, they could explore selective price adjustments, cost optimization, or bundling strategies.
+• For Low-Performing Vendors: Despite higher margins, their low sales volume might indicate a need for better marketing, competitive pricing, or improved distribution strategies.
