@@ -16,7 +16,7 @@ How much capital is locked in unsold inventory?
 Is there a statistically significant difference in profit margins between top- and low-performing vendors?
 
 Project Structure
-.
+
 ├── IngestionScript1.py              # Chunk-based CSV ingestion with logging
 ├── ExploratoryDataAnalysis2.py      # Table-level EDA on SQLite DB
 ├── CleaningPreprocessing5.py        # Cleaning, type casting, feature engineering
